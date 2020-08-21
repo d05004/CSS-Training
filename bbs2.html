@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>예제용 파일</title>
+        <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+        <style type="text/css">
+            /* 스타일 */
+            body{       /* 이런 식으로 하면 body, a태그에 대한 css를 적용할 수 있다.*/
+                margin: 0;
+                padding:0;
+            }
+            h1,h2{
+                color:#ffffff;
+            }
+
+            a{
+                color:#000000;
+                text-decoration: none;
+            }
+            a:hover{
+                text-decoration:underline;
+            }
+            .wrap{
+                width:960px;
+                margin:0 auto;
+                background:#eeeeee;
+            }
+            .header{
+                background:#888888;
+                padding:30px;
+            }
+
+            .content{
+                padding:30px;
+            }
+            .footer {
+                background: #333333;
+                height:50px;
+                padding:20px;
+                font-size:14px;
+                font-weight:bold;
+                color:#ffffff;
+                text-align: center;
+            }
+            
+            .logo{
+                float:left;
+                margin-right:20px;
+            }
+            .clear{
+                clear:both;
+            }
+            ul,li{
+                list-style:none;
+                padding:0px;
+                margin:0px;
+            }
+            
+            .view{
+                width:92%;
+                border:1px solid #bbbbbb;
+                min-height:240px;
+                background:#ffffff;
+                padding:4%;
+            }
+
+            .view .title{
+                font-size:14px;
+                font-weight:bold;
+            }
+
+            .view .bbsLink{
+                font-size:11px;
+                color:#666666;
+            }
+
+            .view .divider{
+                color:#666666;
+            }
+            .view .bbsLink a{
+                font-size:11ox;
+                color:#666666;
+            }
+            .view .bbsLink a:hover{
+                text-decoration: none;
+                color:#ff4500;
+            }
+            .view .titleRightBox{
+                font-size:11px;
+                color:#666666;
+                float:right;
+            }
+
+            .titleContainer{
+                border-bottom:1px dashed #999999;
+                padding-bottom:10px;
+            }
+            .view .articleContainer p{
+                font-size:12px;
+                color:#333333;
+                line-height:20px;
+            }
+            .view .articleContainer a{
+                font-size:12px;
+                color:#333333;
+            }
+            .view .articleContainer a:hover{
+                text-decoration: none;
+                color:#ff4500;
+            }
+            .view .articleContainer img{
+                max-width:100%;
+                margin-top:10px;
+                margin-bottom:10px;
+            }
+            .view .profileContainer{
+                margin-top:50px;
+                float:right;
+                width:40%;
+            }
+            .view .profileContainer table{
+                border-spacing:0;
+                width:100%;
+            }
+            .view .profileContainer img{
+                width:100px;
+            }
+
+            .view .profileContainer .blogLink{
+                vertical-align:top;
+                text-align:right;
+                padding-right:10px;
+            }
+            .view .profileContainer .utilBtn a{
+                font-size:12px;
+            }
+            .view .profileContainer .utilBtn td{
+                border-bottom:1px solid #aaaaaa;
+                text-align:right;
+                font-size:12px;
+                padding-bottom:10px;
+            }
+            .view .profileContainer .blogBox td{
+                padding-top:15px;
+            }
+            .view .profileContainer .imageBox{
+                width:100px;
+                float:right;
+            }
+            .view .commentContainer {
+                margin-top:50px;
+                width:92%;
+                min-height:100px;
+                background:#dddddd;
+                padding:4%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <span class="logo"><img src="data:image/jpeg;base64,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" alt="사이트 로고"></span>
+                <h1>CSS활용강의</h1>
+                <h2>게시판 만들기</h2>
+                <div class="clear"></div>
+            </div>
+            <div class="content">
+                <div class="view">
+                    <div class="titleContainer">
+                        <span class="title">
+                            폼을 이용한 글쓰기 입력 페이지 구성
+                        </span>
+                        <span class="divider">|</span>
+                        <span class="bbsLink"> <a href="#">자유게시판</a></span>
+                        <span class="titleRightBox">
+                            <span class="titleDate">2015.5.10</span>
+                            <span class="divider">|</span>
+                            <span class="bbsLink"> <a href="#">삭제</a></span>
+                        </span>
+                        <div class="clear"></div>
+                        <div class="articleContainer">
+                            <p>
+                                    국회의원이 회기전에 체포 또는 구금된 때에는 현행범인이 아닌 한 국회의 요구가 있으면 회기중 석방된다. 국토와 자원은 국가의 보호를 받으며, 국가는 그 균형있는 개발과 이용을 위하여 필요한 계획을 수립한다. 국회의 정기회는 법률이 정하는 바에 의하여 매년 1회 집회되며, 국회의 임시회는 대통령 또는 국회재적의원 4분의 1 이상의 요구에 의하여 집회된다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다. 신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다. 대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다.
+                            </p>
+                            <a href="#">http://www.naver.com</a>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTmLt2aUUfB6k0w8mfuudHaWYgCBpjq1n63Tw&usqp=CAU">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQz9MnBwJ-BIlCqAAM9uuoxzmmQgHdsOTP3qA&usqp=CAU">
+                
+                        
+                        </div>
+                        <div class="profileContainer">
+                            <table>
+                                <tbody>
+                                    <tr class="utilBtn">
+                                        <td colspan="2">
+                                            글쓴이의 게시글 구독하기 <span class="divider">|</span><a href="#">더보기</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="blogBox">
+                                        <td class="blogLink"><a href="#">Writer's Blog</a></td>
+                                        <td><img  class="imageBox"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE9tG_NFfmLde3aA3q3p2yib1KJslRRNlJQg&usqp=CAU"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="commentContainer">
+                            테스트용 텍스트
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                
+            <div class="footer">
+                    <span>copyright</span>
+            </div>
+        </div>
+    </body>
+</html>
