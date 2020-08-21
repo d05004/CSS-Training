@@ -50,6 +50,11 @@
             .clear{
                 clear:both;
             }
+            ul,li{
+                list-style:none;
+                padding:0px;
+                margin:0px;
+            }
             .bbsList{
                 width:100%;
                 border-spacing: 0;
@@ -84,8 +89,45 @@
             .bbsList .t_author{
                 text-align:left;
                 padding-left:20px;
-                
+            
+            }
+            .bbsList tfoot{
+                text-align:right;
+            }
+            .bbsList tfoot tr td{
+                padding:10px;
+                border-bottom: 2px solid #bbbbbb;
+                border-top: 2px solid #bbbbbb;
+            }
+            .bbsList tfoot .btnWrite{
+                border:1px solid #bbbbbb;
+                font-size: 12px;
+                padding:6px;
+                background:#ffffff;
+            }
+            .bbsList tfoot .btnWrite:hover{
+                text-decoration: none;
+                background:#FFF300;
+            }
+            .pageContainer{
+                width:100%;
+                text-align:center;
+            }
+            .pageList{
+                margin-top:10px;
+                display:inline-block;
+            }
+            .pageList li{
+                float:left;
+                background:#ffffff;
+                padding:5px;
+                border:1px solid #bbbbbb;
+            }
 
+            .searchContainer{
+                width:100%;
+                text-align:center;
+                margin-top:10px;
             }
         </style>
     </head>
@@ -198,11 +240,42 @@
 
                     </tbody>
                     <tfoot>
-
+                        <tr>
+                            <td colspan="5">
+                               <a class="btnWrite" href="#">글쓰기</a> 
+                            </td>
+                        </tr>
                     </tfoot>
                 </table>
+                <div class="pageContainer">
+                    <ul class="pageList">
+                        <li><a href="#"><</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="searchContainer">
+                    <select  id="">
+                        <option value="all">전체기간</option>
+                        <option value="1week">1주일</option>
+                        <option value="1monthj">1개월</option>
+                        <option value="1year">1년</option>
+                    </select>
 
+                    <select  id="">
+                            <option value="subject_article">제목+내용</option>
+                            <option value="subject">제목</option>
+                            <option value="article">내용</option>
+                    </select>
 
+                    <input type="text" id="searchText" name="searchText">
+                    <input type="submit" id="searchBtn" name="searchBtn" value="검색하기">
+                </div>
 
             </div>
                 
