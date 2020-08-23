@@ -14,6 +14,7 @@
             }
 
             a{
+                font-size:12px;
                 color:#000000;
                 text-decoration: none;
             }
@@ -154,6 +155,72 @@
                 background:#dddddd;
                 padding:4%;
             }
+            .view .commentContainer table{
+                width:100%;
+            }
+
+            .view .commentContainer .cmt_author{
+                font-size :12px;
+                font-weight: bold;
+                margin-right:10px;
+            }
+
+            .view .commentContainer .cmt_date{
+                font-size:12px;
+                color:#666666;
+            }
+
+            .view .commentContainer .cmt_reply{
+                font-size:12px;
+                font-weight:bold;
+                margin-left:10px;
+                padding-left:15px;
+                background:url("img/cmtreply.png") no-repeat;
+            }
+            .view .commentContainer .cmt_icon{
+                width:20px;
+            }
+            .view .commentContainer .cmt_util{
+                text-align:right;
+            }
+
+            .view .commentContainer p{
+                font-size:12px;
+                color:#666666;
+            }
+
+            .view .commentContainer ul li{
+                border-bottom: 1px solid #cccccc;
+                padding-bottom:10px;
+                padding-top:10px;
+            }
+
+            .view .commentContainer .cmt_re_table{
+                width:96%;
+                float:right;
+            }
+
+            .view .commentContainer .cmtWriteContainer{
+                padding-top:30px;
+            }
+
+            .view .commentContainer .cmtWriteContainer textarea{
+                width:75%;
+                height:50px;
+                font-size:12px;
+                padding:10px;
+            }
+
+            .view .commentContainer .cmtWriteContainer .cmt_write_btn{
+                float:right;
+                width:16%;
+                height:16px;
+                display:inline-block;
+                background:#eeeeee;
+                border:1px solid #dddddd;
+                padding:28px 20px;
+                text-align:center;
+            }
         </style>
     </head>
     <body>
@@ -205,7 +272,91 @@
                         </div>
                         <div class="clear"></div>
                         <div class="commentContainer">
-                            테스트용 텍스트
+                            <ul>
+                                <li>
+                                        <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td ><img class="cmt_icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE9tG_NFfmLde3aA3q3p2yib1KJslRRNlJQg&usqp=CAU" ></td>
+                                                        <td><a class="cmt_author" href="#">홍길동</a> <span class="cmt_date">2015.5.10 10:30</span>
+                                                            <a class="cmt_reply" href="#">답글</a>
+                                                        </td>
+                                                        <td class="cmt_util">
+                                                            <a href="#">신고</a><span class="divider">|</span>
+                                                            <a href="#">삭제</a>
+                                                        </td>
+                
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                    헌법재판소에서 법률의 위헌결정, 탄핵의 결정, 정당해산의 결정 또는 헌법소원에 관한 인용결정을 할 때에는 재판관 6인 이상의 찬성이 있어야 한다
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                </li>
+                                <li>
+                                        <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td ><img class="cmt_icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE9tG_NFfmLde3aA3q3p2yib1KJslRRNlJQg&usqp=CAU" ></td>
+                                                        <td><a class="cmt_author" href="#">홍길동</a> <span class="cmt_date">2015.5.10 10:30</span>
+                                                            <a class="cmt_reply" href="#">답글</a>
+                                                        </td>
+                                                        <td class="cmt_util">
+                                                            <a href="#">신고</a><span class="divider">|</span>
+                                                            <a href="#">삭제</a>
+                                                        </td>
+                
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                    헌법재판소에서 법률의 위헌결정, 탄핵의 결정, 정당해산의 결정 또는 헌법소원에 관한 인용결정을 할 때에는 재판관 6인 이상의 찬성이 있어야 한다
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                </li>
+                                <li class="cmt_re_table">
+                                        <table >
+                                                <tbody>
+                                                    <tr>
+                                                        <td ><img src="icon_arrow.png"><img class="cmt_icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQE9tG_NFfmLde3aA3q3p2yib1KJslRRNlJQg&usqp=CAU" ></td>
+                                                        <td><a class="cmt_author" href="#">홍길동</a> <span class="cmt_date">2015.5.10 10:30</span>
+                                                            <a class="cmt_reply" href="#">답글</a>
+                                                        </td>
+                                                        <td class="cmt_util">
+                                                            <a href="#">신고</a><span class="divider">|</span>
+                                                            <a href="#">삭제</a>
+                                                        </td>
+                
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                    헌법재판소에서 법률의 위헌결정, 탄핵의 결정, 정당해산의 결정 또는 헌법소원에 관한 인용결정을 할 때에는 재판관 6인 이상의 찬성이 있어야 한다
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                        </table>
+                                </li>
+                                <div class="clear"></div>
+                            </ul>
+                            <div class="cmtWriteContainer">
+                                <textarea name="" id="" cols="30" rows="10">
+
+                                </textarea>
+                                <a href="#" class="cmt_write_btn">댓글 입력</a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
