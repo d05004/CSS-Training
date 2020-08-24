@@ -12,10 +12,19 @@
             }
             a{
                 text-decoration: none;
-                color:#ff4500;
+                color:#666666;
+            }
+            a:hover{
+                text-decoration:underline;
             }
             h1,h2{
                 color:#ffffff;
+            }
+
+            ul, li{
+                list-style:none;
+                padding:0;
+                margin:0;
             }
 
             .wrap{
@@ -65,6 +74,116 @@
                 padding:10px 20px 10px 10px;    
             }
 
+            .titleContainer #titleInput{
+                width:500px;
+
+            }
+
+            .titleContainer .btnSavedNum{
+                color:#ff4500;
+                font-weight:bold;
+            }
+
+            .titleContainer .btnTagPlus{
+                color:#ff4500;
+            }
+
+            .titleContainer .btnFile{
+                font-size:11px;
+                font-weight:bold;
+            }
+            .titleContainer .btnFile img{
+                position:relative;
+                top:4px;
+            }
+
+            .titleContainer .divider{
+                color:#666666;
+            }
+
+            .titleContainer .btnInfo {
+                font-size:11px;
+            }
+
+            .writeContainer {
+                margin-bottom:20px;
+            }
+
+            .writeContainer .writeArea{
+                width:94%;
+                min-height:300px;
+                padding:3%;
+                font-size:12px;
+                color:#666666;
+            }
+
+            .utilContainer .utilTitle{
+                display:inline-block;
+                font-weight:bold;
+                padding:10px 20px 10px 0px;
+            }
+
+            .utilContainer .utilBox{
+                display:inline-block;
+            }
+
+            .utilContainer #tagInput{
+                width:500px;
+            }
+
+            input[type="ardio"]{
+                width:auto;
+            }
+
+            .btnSearchHelp{
+                color:#ff4500;
+            }
+
+            .btnSearchHelp img{
+                position:relative;
+                top:4px;
+            }
+
+            .btnContainer{
+                width:100%;
+                height:80px;
+                border-top:1px solid #cccccc;
+                margin-top:50px;
+                padding-top:30px;
+                text-align:center;
+            }
+
+            .btn{
+                display:inline-block;
+                width:100px;
+                padding:30px 0px 30px 0px;
+                background:#cccccc;
+                text-align:center;
+                text-decoration: none;
+                font-size:14px;
+                font-weight:bold;
+            }
+            .btn:hover{
+                text-decoration: none;
+            }
+
+            .btnSave{
+                background:#00aa88;
+                color:#ffffff;
+            }
+
+            .btnSave:hover{
+                background:#006666;
+            }
+
+            .btnCancel{
+                background:#aa0000;
+                color:#ffffff;
+            }
+
+            .btnCancel:hover{
+                background:#660000;
+            }
         </style>
     </head>
     <body>
@@ -95,27 +214,103 @@
                                         <option value="tTip">정보</option>
                                         <option value="tQna">QnA</option>
                                     </select>
-                                    <a href="#">말머리추가</a>
+                                    <a href="#" class="btnTagPlus">말머리추가</a>
+                                    <input type="checkbox" id="chkNotice" name="chkNotice">
+                                    <label for="chkNotice">카페메인에 공지</label>
+                                    <input type="checkbox" id="chkNotice2" name="chkNotice">
+                                    <label for="chkNotice2">메인에 공지</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="tit">제목</td>
                                 <td>
-                                    
+                                    <input type="text" name="titleInput" id="titleInput" placeholder="제목을 입력하세요">                                    <a href="#" class="btnSaved"><span>임시저장된 글</span><span class="btnSavedNum">(7)</span></a>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="tit">파일첨부</td>
-                                <td></td>
+                                <td>
+                                    <a href="#" class="btnFile">
+                                        <img src="img/sym1.png"> 사진첨부
+                                    </a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="btnFile">
+                                        <img src="img/sym2.png"> 동영상첨부
+                                    </a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="btnFile">
+                                        <img src="img/sym3.png"> 지도첨부
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="tit">정보첨부</td>
-                                <td></td>
+                                <td>
+                                    
+                                    <a href="#" class="btnInfo">책정보
+                                    </a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="btnInfo">위치정보
+                                    </a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="btnInfo">음악정보
+                                    </a>
+                                    <span class="divider">|</span>
+                                    <a href="#" class="btnInfo">상품정보
+                                    </a>
+                                </td>
                             </tr>
                         </table>
                     </div>
-                </div>
 
+                    <div class="writeContainer">
+                        <textarea class="writeArea" value=""></textarea>
+                    </div>
+
+                    <div class="utilContainer">
+                        <ul>
+                            <li>
+                                <div class="utilTitle">태그달기</div>
+                                <div class="utilBox">
+                                    <input type="text" id="tagInput" name="tagInput" placeholder="태그를 입력하세요. 태그와 태그는 쉼표로 구분합니다.">
+                                    <select>
+                                        <option selected disabled>나의 태그보기</option>
+                                        <option value="0">HTML</option>
+                                        <option value="1">CSS</option>
+                                        <option value="2">JS</option>
+                                        <option value="3">PHP</option>
+                                        <option value="4">MYSQL</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="utilTitle">공개설정</div>
+                                    <div class="utilBox">
+                                        <input type="radio" id="radio_yes" name="radioPublic" checked="checked">
+                                        <label for="radio_yes">전체공개</label>
+                                        <input type="radio" id="radio_no" name="radioPublic">
+                                        <label for="radio_no">멤버공개</label>
+                                    </div>
+                            </li>
+                            <li>
+                                    <div class="utilTitle">검색설정</div>
+                                    <div class="utilBox">
+                                        <input type="checkbox" id="searchChk" name="searchChk">
+                                        <label for="searchChk">어디서나 검색될 수 있게 합니다.</label>
+                                        <a href="#" class="btnSearchHelp">
+                                            <img src="img/warning.png">
+                                            멤버가 아니어도 이 글을 볼 수 있습니다.</a>
+                                    </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btnContainer">
+                            <a href="#" class="btn btnSave">저장하기</a>
+                            <a href="#" class="btn btnCancel">취소하기</a>
+                    </div>
+
+                </div>
+                
             </div>
                 
             <div class="footer">
